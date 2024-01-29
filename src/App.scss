@@ -1,0 +1,171 @@
+h1 {
+
+  font-size: 2.25rem;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+  letter-spacing: -0.286px;
+  font-weight: 500;
+  margin: 40px 0;
+}
+
+form {
+
+
+  max-width: 35%;
+  min-width: 420px;
+  display: flex;
+
+  input {
+    height: 58px;
+    background-color: white;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    width: 100%;
+    font-size: 1.2em;
+    color: #2c2c2c;
+    padding-left: 15px;
+    font-weight: 400;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input::placeholder {
+    color: rgba(44, 44, 44, 0.5);
+  }
+
+  button {
+    border: none;
+    height: 58px;
+    width: 65px;
+    border-radius: 0 15px 15px 0;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #3f3f3f;
+  }
+}
+
+.bg-img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 350px;
+}
+
+.input-container {
+  width: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./assets/images/pattern-bg-desktop.png);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.data-display {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%);
+  min-height: 13rem;
+
+  width: 77%;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.1);
+
+  div:last-child {
+    border: none;
+  }
+
+  div {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    min-height: 9.375vh;
+    padding: 0 5% 0 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    p {
+      font-size: clamp(1.25rem, 0.6rem + 1vw, 2rem);
+      line-height: 30px;
+      letter-spacing: -0.232px;
+      color: #2c2c2c;
+    }
+
+    span {
+      font-size: clamp(10px, 1px + 1vw, 14px);
+
+      font-weight: 700;
+      letter-spacing: 1.75px;
+      opacity: 0.4987;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+
+.map-container {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+@media screen and (max-width: 1050px) {
+  .data-display {
+    padding: 10px 0;
+
+    div {
+      border: none;
+      align-items: center;
+      padding: 0 15%;
+
+      span {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  .data-display {
+    top: 20%;
+  }
+
+  form {
+
+    min-width: 77%;
+
+    input {
+      font-size: 0.85rem;
+    }
+  }
+}
