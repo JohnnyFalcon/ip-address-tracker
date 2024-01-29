@@ -43,7 +43,6 @@ function App() {
       try {
         const response = (await getData(inputValue, inputType)) as Data;
         setData(response);
-        console.log(response)
         setCoordinates({ lat: response.location.lat, lng: response.location.lng })
 
       } catch (error) {
@@ -101,9 +100,9 @@ function App() {
             <span>IP ADDRESS</span>
             <p>{data?.ip}</p>
           </div>
-          <div>
+          <div className="location">
             <span>LOCATION</span>
-            <p>{data?.location.region}, {data?.location.city}</p>
+            <p>{data?.location.region},</p><p> {data?.location.city}</p>
           </div>
 
           <div>
